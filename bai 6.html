@@ -7,43 +7,39 @@
 <body>
 <p id="heart"></p>
 <script>
-    let num = 29;
-
-    let result = "";
-    for (row = 1; row <= num; row++){
-        if ((row > (num/2 - 2)) && (row < (num/2 + 2))){
-            result += "&nbsp;\t";
+    for (let row = 1; row <= 29; row++){
+        if ((row > (29/2 - 2)) && (row < (29/2 + 2))){
+            document.write("&nbsp;\t");
         }else if (row == 1 || row == 29 || row == 2 || row == 28){
-            result += "&nbsp;\t";
+            document.write("&nbsp;\t");
         }else {
-            result += "*";
+           document.write("*");
         }
     }
-    result += "<br>";
-    for (row = 1; row <= num; row++){
+    document.write("<br>");
+    for (let row = 1; row <= 29; row++){
         if (row == 1 || row == 29){
-            result += "&nbsp;\t";
-        }else if ((row > (num/2 - 1)) && (row < (num/2 + 1))){
-            result += "&nbsp;\t";
+           document.write("&nbsp;\t");
+        }else if ((row > (29/2 - 1)) && (row < (29/2 + 1))){
+            document.write("&nbsp;\t");
         }else {
-            result += "*";
+           document.write("*");
         }
     }
-    result += "<br>";
-    for (row = 1; row <= num; row++){
-        result += "*";
+    document.write("<br>");
+    for (let row = 1; row <= 29; row++){
+        document.write("*");
     }
-    result += "<br>";
-    for (col = num; col >= 1; col = col - 4){
-        for (space = (num - col)/2; space >= 1; space--){
-            result += "&nbsp;\t";
+    document.write("<br>");
+    for (let col = 29; col >= 1; col = col - 4){
+        for (let space = (29 - col)/2; space >= 1; space--){
+            document.write("&nbsp;\t");
         }
-        for (row = 1; row <= col; row++){
-            result += "*";
+        for (let row = 1; row <= col; row++){
+            document.write("*");
         }
-        result += "<br>";
+       document.write("<br>");
     }
-    document.getElementById("heart").innerHTML = result;
 </script>
 </body>
 </html>
