@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    body {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  </style>
 </head>
 <body>
 <p id="result"></p>
 <script>
-    let width = parseInt(prompt("Nhập vào chiều dài :"));
-    let height = parseInt(prompt("Nhập vào chiều rộng :"));
-    let result = "";
-    for (row = 0; row < width; row++){
-        result += "*"
-    }
-    for (col = 0; col < height; col++){
-        result += "<br>"
-        result += "*"
-        for (space = 0; space < width-2; space++){
-            result += "&ensp;";
+    for (let i = 1; i <= 7; i++) {
+      document.write("*");
+      for (let j = 1; j <= 20; j++) {
+        if (i == 1 || i == 7) {
+          document.write("*");
+        } else {
+          document.write("&nbsp;&nbsp;");
         }
-        result += "*"
+      }
+      document.write("*");
+      document.write("<br>");
     }
-    result += "<br>"
-    for (row = 0; row < width; row++){
-        result += "*"
-    }
-    document.getElementById('result').innerHTML = result;
 </script>
 </body>
 </html>
